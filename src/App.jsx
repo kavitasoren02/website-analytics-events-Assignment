@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Navbar from '././components/Navbar'
 import ProductGrid from '././components/ProjectGrid'
 import Cart from '././components/Cart'
+import data from '././assets/products.json'
 import './App.css'
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
     // Load products from JSON
     const loadProducts = async () => {
       try {
-        const response = await fetch('/products.json')
-        const data = await response.json()
+        // const response = await fetch('/products.json')
+        // const data = await response.json()
         setProducts(data.products)
         
         const uniqueCategories = ['All', ...new Set(data.products.map(p => p.category))]
