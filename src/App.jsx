@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react'
 import Navbar from '././components/Navbar'
 import ProductGrid from '././components/ProjectGrid'
-import Cart from './components/Cart'
+import Cart from '././components/Cart'
 import './App.css'
 
 function App() {
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState([])
   const [showCart, setShowCart] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState('All')
+  const [categories, setCategories] = useState([])
 
   useEffect(() => {
     // Load products from JSON
@@ -16,6 +18,9 @@ function App() {
         const response = await fetch('/products.json')
         const data = await response.json()
         setProducts(data.products)
+        
+        const uniqueCategories = ['All', ...new Set(data.products.map(p => p.category))]
+        setCategories(uniqueCategories)
       } catch (error) {
         console.error('Error loading products:', error)
       }
@@ -73,7 +78,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar cartCount={cart.length} onCartClick={() => setShowCart(!showCart)} />
+      <Navbar
+      cartCount={cart.length}
+      onCartClick={() => setShowCart(!showCart)}
+        showBackButton={showCart}
+        onBack={() => setShowCart(false)}  />
       
       {showCart ? (
         <Cart
@@ -81,6 +90,7 @@ function App() {
           onRemove={removeFromCart}
           onUpdateQuantity={updateQuantity}
           onCheckout={checkout}
+        
         />
       ) : (
         <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
@@ -88,7 +98,28 @@ function App() {
             <h1 className="text-4xl font-bold text-black">Shop Our Collection</h1>
             <p className="text-gray-600 mt-2">Discover premium products at unbeatable prices</p>
           </div>
-          <ProductGrid products={products} onAddToCart={addToCart} />
+          
+          <div className="mb-8 flex flex-wrap gap-3">
+            {categories.map(category => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                  selectedCategory === category
+                    ? 'bg-black text-white'
+                    : 'bg-gray-200 text-black hover:bg-gray-300'
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
+
+          <ProductGrid
+            products={products}
+            selectedCategory={selectedCategory}
+            onAddToCart={addToCart}
+          />
         </main>
       )}
     </div>
