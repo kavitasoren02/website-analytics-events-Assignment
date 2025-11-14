@@ -1,7 +1,7 @@
 
 function Navbar({ cartCount, onCartClick }) {
   return (
-    <nav className="bg-black text-white">
+    <nav className="bg-black text-white sticky top-0 z-100">
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex justify-between items-center">
 
         <div className="flex items-center gap-2">
