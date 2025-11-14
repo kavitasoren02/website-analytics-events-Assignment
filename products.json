@@ -1,0 +1,76 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Premium Wireless Headphones",
+      "description": "High-quality sound with noise cancellation and 30-hour battery life",
+      "price": 199.99,
+      "image": "https://plus.unsplash.com/premium_photo-1678099940967-73fe30680949?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Electronics",
+      "stock": 15
+    },
+    {
+      "id": 2,
+      "name": "Organic Coffee Beans",
+      "description": "Single-origin Ethiopian beans with rich, smooth flavor",
+      "price": 24.99,
+      "image": "https://firehouseroastery.com/wp-content/uploads/2023/12/Organic-Coffee-Prescott-AZ.webp",
+      "category": "Food",
+      "stock": 42
+    },
+    {
+      "id": 3,
+      "name": "Smart Watch",
+      "description": "Track your fitness with advanced sensors and 7-day battery",
+      "price": 299.99,
+      "image": "https://gourban.in/cdn/shop/files/Beige.png?v=1749553994&width=1000",
+      "category": "Electronics",
+      "stock": 8
+    },
+    {
+      "id": 4,
+      "name": "Yoga Mat",
+      "description": "Non-slip, eco-friendly mat perfect for home workouts",
+      "price": 34.99,
+      "image": "https://images.pexels.com/photos/2394051/pexels-photo-2394051.jpeg",
+      "category": "Fitness",
+      "stock": 28
+    },
+    {
+      "id": 5,
+      "name": "Stainless Steel Water Bottle",
+      "description": "Keeps drinks cold for 24 hours with ergonomic design",
+      "price": 44.99,
+      "image": "https://image.made-in-china.com/2f0j00UGYcbOLqJQuy/Price-Hot-and-Cold-Water-Bottle-Eco-Friendly-18-8-Stainless-Steel-Matte-Travel-Water-Bottle-with-Lid.jpg",
+      "category": "Lifestyle",
+      "stock": 35
+    },
+    {
+      "id": 6,
+      "name": "Wireless Charging Pad",
+      "description": "Fast charging pad compatible with all Qi-enabled devices",
+      "price": 29.99,
+      "image": "https://cdn.shopify.com/s/files/1/1520/4366/files/qi2-trio-wireless-charging-pad-satechi-884515.webp?v=1729820489",
+      "category": "Electronics",
+      "stock": 50
+    },
+    {
+      "id": 7,
+      "name": "Bamboo Cutting Board Set",
+      "description": "3-piece set including knives for versatile kitchen use",
+      "price": 49.99,
+      "image": "https://i.ytimg.com/vi/QZULNDgVvD8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAHgByvmxDazX_8qVVC6QHi1cWUgQ",
+      "category": "Home",
+      "stock": 18
+    },
+    {
+      "id": 8,
+      "name": "LED Desk Lamp",
+      "description": "Adjustable brightness with USB charging port built-in",
+      "price": 39.99,
+      "image": "https://homafy.com/wp-content/uploads/2024/02/LED-Desk-Lamp-with-Touch-Control.jpeg",
+      "category": "Home",
+      "stock": 24
+    }
+  ]
+}
