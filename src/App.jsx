@@ -82,8 +82,7 @@ function App() {
       <Navbar
       cartCount={cart.length}
       onCartClick={() => setShowCart(!showCart)}
-        showBackButton={showCart}
-        onBack={() => setShowCart(false)}  />
+       />
       
       {showCart ? (
         <Cart
@@ -91,6 +90,7 @@ function App() {
           onRemove={removeFromCart}
           onUpdateQuantity={updateQuantity}
           onCheckout={checkout}
+          onBack={()=> setShowCart(false)}
         
         />
       ) : (
